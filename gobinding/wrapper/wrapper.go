@@ -5,7 +5,8 @@ package wrapper
 /*
 #include "../src/gobinding.h"
 #include <stdlib.h>
-#cgo LDFLAGS: -L${SRCDIR}/../../clib/lib -lclib -L${SRCDIR}/../../gobinding/lib -lgobinding
+#cgo LDFLAGS: -L${SRCDIR}/../../gobinding/lib -lgobinding -L${SRCDIR}/../../clib/lib -lclib
+#cgo LDFLAGS: 
 */
 import "C"
 

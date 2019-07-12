@@ -1,6 +1,6 @@
 #started with '#' are comments
 
-DIRS=clib gobinding cngo
+DIRS=clib gobinding 
 INSTALL_DIRS=bin
 BINP=bin
 CC=gcc

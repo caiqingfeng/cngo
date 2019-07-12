@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Printf("inside main")
+	fmt.Printf("inside main\n")
 	wrapper.CppNoParameter()
 }
