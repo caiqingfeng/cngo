@@ -1,30 +1,28 @@
 #started with '#' are comments
 
-DIRS=ctptest ctpgo
+DIRS=clib gobinding
 INSTALL_DIRS=bin
 BINP=bin
 CC=gcc
 CXX=g++
 
-#all: src test
-#all: ctptest ctpgo trading
-all: ctpgo trading
+all: clib #gobinding
 
-ctpgo: force_look
-	@echo "make ctpgo"
-	cd ctpgo; $(MAKE)
-	@echo "build ctpgo end"
+clib: force_look
+	@echo "make clib"
+	cd clib; $(MAKE)
+	@echo "build clib end"
 
-ctptest: force_look
-	@echo "make ctptest"
-	cd ctptest; $(MAKE)
-	@echo "build ctptest end"
+gobinding: force_look
+	@echo "make gobinding"
+	cd gobinding; $(MAKE)
+	@echo "build gobinding end"
 
 install:
 	-for d in $(INSTALL_DIRS); do (cp $$d/bin/* bin); done
 
-trading: force_look
-	go build -o $(BINP)/trading trading/main.go
+cngo: force_look
+	go build -o $(BINP)/cngo cngo/main.go
 
 gopackage:
 	export GO111MODULE=on && go mod tidy && go mod vendor
