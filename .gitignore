@@ -1,32 +1,53 @@
-# Prerequisites
-*.d
+#
+bin/
+obj/
+*/log/*
+#lib/
+node_modules/
+android/include/
+android/**/src
+android/**/proto
+ios/include/
+ios/**/src
+ios/**/proto
+.idea/
+.vscode/
+
+# go packages
+vendor
+go.mod
+go.sum
+
+# go built bin
+main
+trading
 
 # Compiled Object files
 *.slo
 *.lo
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
+*.d
 
 # Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
+libctpgo.so
+libtrading.so
+#*.so
+#*.dylib
 
 # Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+#*.lai
+#*.la
 
-# Executables
-*.exe
-*.out
-*.app
+# other
+
+*.DS_Store
+*.tgz
+.*.sw*
+core
+
+# exception
+#!/bin
+.settings/
+
+# ctp connect files
+*.con
