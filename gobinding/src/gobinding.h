@@ -7,11 +7,7 @@ extern "C" {
 
 typedef int (*onBarCallback)();
 
-void ConnectTrading();
-void QueryInstrument(const char* inst);
-void ConnectMd();
-//void SetCallBack(onBarCallback f);
-void SetCallBack(void *f);
+void CppNoParameter();
 
 #ifdef __cplusplus
 }
