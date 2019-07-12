@@ -1,12 +1,12 @@
 #started with '#' are comments
 
-DIRS=clib gobinding
+DIRS=clib gobinding cngo
 INSTALL_DIRS=bin
 BINP=bin
 CC=gcc
 CXX=g++
 
-all: clib #gobinding
+all: clib gobinding cngo
 
 clib: force_look
 	@echo "make clib"
