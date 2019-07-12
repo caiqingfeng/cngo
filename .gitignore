@@ -29,9 +29,7 @@ trading
 *.d
 
 # Compiled Dynamic libraries
-libctpgo.so
-libtrading.so
-#*.so
+*.so
 #*.dylib
 
 # Compiled Static libraries
