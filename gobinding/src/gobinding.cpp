@@ -9,5 +9,6 @@ using namespace std;
 
 void CppNoParameter()
 {
-	CppFoo::CppNoParameter();
+	CppFoo c;
+	c.CppNoParameter();
 }
