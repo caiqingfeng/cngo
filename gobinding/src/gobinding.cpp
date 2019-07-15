@@ -12,3 +12,8 @@ void CppNoParameter()
 	CppFoo c;
 	c.CppNoParameter();
 }
+
+int CppCallbackGo()
+{
+	
+}

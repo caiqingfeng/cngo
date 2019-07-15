@@ -5,9 +5,11 @@
 extern "C" {
 #endif
 
-typedef int (*onBarCallback)();
+typedef int (*callback1)();
 
 void CppNoParameter();
+void CppFuncParameter(callback1 f);
+int CppCallbackGo();
 
 #ifdef __cplusplus
 }

@@ -6,12 +6,18 @@ package wrapper
 #include "../src/gobinding.h"
 #include <stdlib.h>
 #cgo LDFLAGS: -L${SRCDIR}/../../gobinding/lib -lgobinding -L${SRCDIR}/../../clib/lib -lclib
-#cgo LDFLAGS: 
+#cgo LDFLAGS:
 */
-import "C"
-
-//"fmt"
+import (
+	"C"
+	"fmt"
+)
 
 func CppNoParameter() {
+	fmt.Printf("wrapper.CppNoParameter triggered\n")
 	C.CppNoParameter()
+}
+
+func CppCallbackGo() {
+	C.CppCallbackGo()
 }
