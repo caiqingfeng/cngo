@@ -16,6 +16,5 @@ func main() {
 	fmt.Printf("inside main\n")
 	wrapper.CppNoParameter()
 
-	f := CallbackGo
-	wrapper.CppCallbackGo(&f)
+	wrapper.CppCallbackGo()
 }

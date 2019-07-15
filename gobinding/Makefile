@@ -20,7 +20,6 @@ DEPFILES := $(patsubst %.cpp,$(OBJP)/%.d,$(CPPSRCS))
 -include $(DEPFILES)
 
 LIBBINDINGOBJS := $(OBJP)/gobinding.o
-#LIBBINDINGDEPHEADERS := ../cngo/libcngo.h
 #LIBBINDINGOBJS += ../clib/obj/clib.o
 
 all: $(LIBP)/libgobinding.so
@@ -30,7 +29,7 @@ objs: $(CPPOBJS) $(CCOBJS) $(TSTOBJS)
 	-for d in $(DPDIRS); do (cd $$d; $(MAKE) objs || exit "$$?");done
 	cd $(CURP)
 
-$(LIBP)/libgobinding.so: $(LIBBINDINGDEPHEADERS) $(LIBBINDINGOBJS) | $(LIBP)
+$(LIBP)/libgobinding.so: $(LIBBINDINGOBJS) | $(LIBP)
 	$(CXX) $(CXXFLAGS) $(LIBBINDINGOBJS) -MMD -shared -o $@
 
 $(CPPOBJS): $(OBJP)/%.o:$(SRCP)/%.cpp | $(OBJP)
@@ -38,9 +37,6 @@ $(CPPOBJS): $(OBJP)/%.o:$(SRCP)/%.cpp | $(OBJP)
 
 $(CCOBJS): $(OBJP)/%.o:$(SRCP)/%.cc | $(OBJP)
 	$(CXX) $(CXXFLAGS) -c $< -MMD -o $@
-
-$(LIBBINDINGDEPHEADERS):
-	cd ../cngo; make libcngo.h
 
 $(DPOBJS): $(DPSRCS)
 	cd $(COMMONP); make

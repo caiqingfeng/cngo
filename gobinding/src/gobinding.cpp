@@ -15,10 +15,9 @@ void CppNoParameter()
 	c.CppNoParameter();
 }
 
-int CppCallbackGo(callback1 f)
+int CppCallbackGo()
 {
 	CallbackGo();
-	//(*f)();
 	return 0;	
 }
 

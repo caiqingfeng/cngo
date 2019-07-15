@@ -10,15 +10,13 @@ package wrapper
 */
 import "C"
 import "fmt"
-import "unsafe"
 
 func CppNoParameter() {
 	fmt.Printf("wrapper.CppNoParameter triggered\n")
 	C.CppNoParameter()
 }
 
-func CppCallbackGo(CallbackGo interface {}) {
+func CppCallbackGo() {
 	fmt.Printf("wrapper.CppCallbackGo triggered\n")
-	f := CallbackGo
-	C.CppCallbackGo(C.callback1(unsafe.Pointer(&f)))
+	C.CppCallbackGo()
 }
