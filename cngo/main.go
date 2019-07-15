@@ -6,17 +6,16 @@ import (
 	"fmt"
 )
 
-/*
- */
 //export CallbackGo
 func CallbackGo() C.int {
-	fmt.Printlf("inside CallbackGo \n")
-	return 0
+	fmt.Printf("inside CallbackGo \n")
+	return C.int(0)
 }
 
 func main() {
 	fmt.Printf("inside main\n")
 	wrapper.CppNoParameter()
 
-	wrapper.CppCallbackGo()
+	f := CallbackGo
+	wrapper.CppCallbackGo(&f)
 }

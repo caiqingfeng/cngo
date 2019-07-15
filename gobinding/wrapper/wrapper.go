@@ -8,16 +8,17 @@ package wrapper
 #cgo LDFLAGS: -L${SRCDIR}/../../gobinding/lib -lgobinding -L${SRCDIR}/../../clib/lib -lclib
 #cgo LDFLAGS:
 */
-import (
-	"C"
-	"fmt"
-)
+import "C"
+import "fmt"
+import "unsafe"
 
 func CppNoParameter() {
 	fmt.Printf("wrapper.CppNoParameter triggered\n")
 	C.CppNoParameter()
 }
 
-func CppCallbackGo() {
-	C.CppCallbackGo()
+func CppCallbackGo(CallbackGo interface {}) {
+	fmt.Printf("wrapper.CppCallbackGo triggered\n")
+	f := CallbackGo
+	C.CppCallbackGo(C.callback1(unsafe.Pointer(&f)))
 }

@@ -9,7 +9,8 @@ typedef int (*callback1)();
 
 void CppNoParameter();
 void CppFuncParameter(callback1 f);
-int CppCallbackGo();
+//int CppCallbackGo();
+int CppCallbackGo(callback1 f);
 
 #ifdef __cplusplus
 }

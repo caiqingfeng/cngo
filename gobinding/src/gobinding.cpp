@@ -4,6 +4,8 @@
 #include "gobinding.h"
 #include <iostream>
 #include <string.h>
+//#include "libcngo.h"
+extern "C" int CallbackGo();
 
 using namespace std;
 
@@ -13,7 +15,10 @@ void CppNoParameter()
 	c.CppNoParameter();
 }
 
-int CppCallbackGo()
+int CppCallbackGo(callback1 f)
 {
-	
+	CallbackGo();
+	//(*f)();
+	return 0;	
 }
+

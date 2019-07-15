@@ -32,6 +32,7 @@ clean:
 	rm -f bin/*
 	find . -name "core" -exec rm {} \;
 	find . -name "*.o" -exec rm {} \;
+	find . -name "*.so" -exec rm {} \;
 	find . -name "*.out" -exec rm {} \;
 	-for d in $(DIRS); do (cd $$d; make clean; cd ..); done
 
