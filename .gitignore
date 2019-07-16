@@ -20,7 +20,7 @@ go.sum
 
 # go built bin
 main
-cngo
+bin/cngo
 
 # Compiled Object files
 *.slo
