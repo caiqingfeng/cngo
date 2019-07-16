@@ -1,8 +1,12 @@
 package main
 
+/*
+#include "gobinding.h"
+#include <stdlib.h>
+#cgo LDFLAGS: -L${SRCDIR}/../clib/lib -lclib
+*/
+import "C"
 import (
-	"C"
-	"cngo/gobinding/wrapper"
 	"fmt"
 )
 
@@ -14,7 +18,6 @@ func CallbackGo() C.int {
 
 func main() {
 	fmt.Printf("inside main\n")
-	wrapper.CppNoParameter()
 
-	wrapper.CppCallbackGo()
+	C.CppCallbackGo()
 }

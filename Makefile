@@ -22,7 +22,7 @@ install:
 	-for d in $(INSTALL_DIRS); do (cp $$d/bin/* bin); done
 
 cngo: force_look
-	go build -o $(BINP)/cngo cngo/main.go
+	go build -o $(BINP)/cngo ./cngo
 
 gopackage:
 	export GO111MODULE=on && go mod tidy && go mod vendor

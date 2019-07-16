@@ -20,7 +20,7 @@ go.sum
 
 # go built bin
 main
-trading
+cngo
 
 # Compiled Object files
 *.slo
