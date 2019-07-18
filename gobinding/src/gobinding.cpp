@@ -5,7 +5,6 @@
 #include <iostream>
 #include <string.h>
 //#include "libcngo.h"
-extern "C" int CallbackGo();
 
 using namespace std;
 
@@ -17,7 +16,6 @@ void CppNoParameter()
 
 int CppCallbackGo()
 {
-	CallbackGo();
 	return 0;	
 }
 

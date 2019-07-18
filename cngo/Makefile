@@ -13,13 +13,10 @@ CURP=$(CURDIR)
 
 #src
 
-all: libcngo.h $(BINP)/cngo
-
-libcngo.h: main.go
-	go  build -buildmode=c-shared -o libcngo.so main.go 
+all: $(BINP)/cngo
 
 $(BINP)/cngo: main.go
-	go  build main.go -o $(BINP)/cngo
+	go  build -o $(BINP)/cngo
 
 clean:
 	@echo "Removing linked and compiled files......"

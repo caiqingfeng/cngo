@@ -20,7 +20,7 @@ DEPFILES := $(patsubst %.cpp,$(OBJP)/%.d,$(CPPSRCS))
 -include $(DEPFILES)
 
 LIBBINDINGOBJS := $(OBJP)/gobinding.o
-#LIBBINDINGOBJS += ../clib/obj/clib.o
+LIBBINDINGOBJS += ../clib/obj/clib.o
 
 all: $(LIBP)/libgobinding.so
 
